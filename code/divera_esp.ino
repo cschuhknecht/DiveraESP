@@ -51,7 +51,7 @@ void loop() {
 
   String httpRequestData;
   if (monthDay >= 1 && monthDay <=7 && day == 0 && hour == 12 && minute >= 25 && minute <= 35) {
-    httpRequestData = "type=Probealarm&priority=0";
+    httpRequestData = "type=Probealarm&priority=0"; //set the POST request data youll later send
   }
   else {
     httpRequestData = "type=Einsatz";
@@ -92,8 +92,7 @@ void loop() {
 
     // Specify content-type header
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    // Data to send with HTTP POST
-    //String httpRequestData = "type=F1+Dachgeschoss&text=Person+im+Gebeaude%2C";
+
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);
     // Get http payload
@@ -107,13 +106,6 @@ void loop() {
     // Free resources
     http.end();
 
-    // If you need an HTTP request with a content type: application/json, use the following:
-    //http.addHeader("Content-Type", "application/json");
-    //int httpResponseCode = http.POST("{\"api_key\":\"tPmAT5Ab3j7F9\",\"sensor\":\"BME280\",\"value1\":\"24.25\",\"value2\":\"49.54\",\"value3\":\"1005.14\"}");
-
-    // If you need an HTTP request with a content type: text/plain
-    //http.addHeader("Content-Type", "text/plain");
-    //int httpResponseCode = http.POST("Hello, World!");
   }
   else {
     Serial.println("WiFi Disconnected");
