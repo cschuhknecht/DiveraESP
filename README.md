@@ -11,7 +11,7 @@ The Mentioned API can easily be accessed. How? Read the documentation pdf in the
 ## About DiveraESP
 DiveraESP is basically Code that runs on an ESP8266 (for example a WeMos D1 mini) that gets its power via the USB Port of the Pager (if it has one, this is tested with the shown Airbus model) if it receives an alarm. The ESP than interacts with the API and triggers the alert on the mobile phone(s).
 
-There for you need a DIVERA account, a phone, the app and an ESP8266 like the mentioned WeMos one. The documentation tells you everything you need to know about the URLs the ESP8266 is going to send a GET request to.
+There for you need a DIVERA account, a phone, the app and an ESP8266 like the mentioned WeMos one. The documentation tells you everything you need to know about the URLs the ESP8266 is going to send a POST request to.
 
 The URL and the Wi-Fi login has to be changed in the Code in Order to work.
 
