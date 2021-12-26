@@ -34,6 +34,9 @@ Here is how to install them. Go to *Tools/Manage Libraries...* and search for th
 ### Flash it
 If you selected your board like mentioned above then all there's left is to choose the USB Port the ESP is connected to. You can do that by Tools/Port. Then flash it via the arrow button at the top. Done.
 
+## Known Issues
+Theres a bug in the time related code. It will mess up Summertime but will work in winter time. I suggest not to use that part of the code. I'll work on a fix.
+
 ## Future changes
 - divide the code with classes
 - put it all in setup() instead of loop()
